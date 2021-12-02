@@ -16,10 +16,10 @@ class Publicacion inherits Contenido{
 }
 class Historia inherits Contenido{
 	const property fechaActual = new Date()
-//	var diferenciaEntreFechas = fechaActual - fechaDePublicacion
+	var diferenciaEntreFechas = fechaActual - fechaDePublicacion
 	method esVisible(tipo){
-		if(fechaActual == fechaDePublicacion ){
-			tipo.esVisible(unUsuario, fechaActual)
+		if(diferenciaEntreFechas == 0 || diferenciaEntreFechas == 1 ){
+			tipo.esVisible(unContacto, fechaActual)
 		}
 	}
 }
